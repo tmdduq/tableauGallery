@@ -1,0 +1,27 @@
+
+.cd-popup {
+  position: fixed; 
+  top: 0;
+  height: 100%;
+  width: 100%;
+  text-align: -webkit-center;
+   background: 
+	linear-gradient(  217deg, rgba(255, 0, 0, 0.1), rgba(255, 0, 0, 0) 70.71%), 
+	linear-gradient(127deg, rgba(0, 255, 0, 0.1), rgba(0, 255, 0, 0) 70.71%),
+	linear-gradient(336deg, rgba(0, 0, 255, 0.1), rgba(0, 0, 255, 0) 70.71%);
+  padding-top : 1%;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  overflow-y: auto;
+  z-index: 10000;
+}
+
+.cd-popup.is-visible {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
+  transition: opacity 0.3s 0s, visibility 0s 0s;
+}

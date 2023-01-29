@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="./jquery-3.6.3.js"></script>
+	<script type="text/javascript" src ="./jquery.tablesorter.min.js"></script>
+	<link rel="stylesheet" href="./css/inputbox.css">
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+<style>
+	
+</style>
+</head>
+<body>
+	<table id="keywords" class="tablesorter">
+        <caption>Developers Rating</caption>
+        <thead>
+            <tr>
+                <th>년도</th>
+                <th>Group</th>
+                <th>Name</th>
+                <th>Points</th>
+                <th>Control</th>
+            </tr>
+            
+            <tr class= "input-box">
+                <td><input type="number" name="row1"></td>
+                <td><input type="number" name="row2" ></td>
+                <td><input type="number" name="col1" ></td>
+                <td><input type="number" name="col2" ></td>
+                <td><button class="add">입 력</button></td>
+            </tr>
+            
+        </thead>
+        <tbody>            
+			<tr>
+                <td>2021년</td>
+                <td rowspan="1">1월</td>
+                <td>1</td>
+                <td>180</td>
+                <td>오승엽 경사<br>2022.01.23. 12:04
+                    <button class="delete">삭 제</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2022년</td>
+                <td rowspan="1">1월</td>
+                <td>20</td>
+                <td>66</td>
+                <td>오승엽 경사<br>2021.01.23. 12:04<br>
+                    <button class="modify">수 정</button>
+                    <button class="delete">삭 제</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2023년</td>
+                <td rowspan="1">1월</td>
+                <td>7</td>
+                <td>9</td>
+                <td>오승엽 경사<br>2020.01.23. 12:04
+                    <button class="delete">삭 제</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2024년</td>
+                <td rowspan="1">1월</td>
+                <td>32</td>
+                <td>10</td>
+                <td>오승엽 경사<br>2022.11.23. 12:04
+                    <button class="delete">삭 제</button>
+                </td>
+            </tr>
+
+        </tbody>
+        
+        
+        <tfoot>
+	      	<tr	>
+		        <td class="tablefoot"  colspan="2">합계</td>
+		        <td class="tablefoot" colspan="1">118</td>
+		        <td class="tablefoot" colspan="1">228</td>
+		        <td class="tablefoot" colspan="1"></td>
+	      	</tr>
+        </tfoot>
+    </table>
+</body>
+<script>
+	$(function(){
+		$('#keywords').tablesorter();
+	});
+	$(function() {
+		  $("#keywords").tablesorter({ sortList: [[1,0], [2,0]] });
+		});
+</script>
+</html>
